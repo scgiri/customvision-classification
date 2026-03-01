@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cv-classify"
+version = "0.1.0"
+description = "Azure Custom Vision image classification CLI & library"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+readme = "README.md"
+authors = [
+  {name = "Satya Chandra Giri"},
+]
+keywords = ["azure", "custom-vision", "image-classification", "ai", "cognitive-services"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+  "azure-cognitiveservices-vision-customvision",
+  "msrest>=0.7.1",
+  "pydantic>=2.6.0",
+]
+
+[project.urls]
+Repository = "https://github.com/<your-org>/cv-classify"
+Issues = "https://github.com/<your-org>/cv-classify/issues"
+
+[project.scripts]
+cv-classify = "cv_classify.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

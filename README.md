@@ -49,9 +49,15 @@
 
 ### 3. Upload & Tag Images
 
-1. Create **3–5 tags** (labels), for example:
-   `dog` · `cat` · `car` · `food` · `other`
-2. Upload images and assign tags.
+This project includes **60 sample images** in the `data/` folder, organised by tag:
+
+| Tag | Folder | Count | Samples |
+|-----|--------|-------|---------|
+| **apple** | `data/apple/` | 20 | ![apple_1](data/apple/apple_1.png) ![apple_2](data/apple/apple_2.png) ![apple_3](data/apple/apple_3.png) ![apple_4](data/apple/apple_4.png) |
+| **banana** | `data/banana/` | 20 | ![banana_1](data/banana/banana_1.png) ![banana_2](data/banana/banana_2.png) ![banana_3](data/banana/banana_3.png) ![banana_4](data/banana/banana_4.png) |
+| **orange** | `data/orange/` | 20 | ![orange_1](data/orange/orange_1.png) ![orange_2](data/orange/orange_2.png) ![orange_3](data/orange/orange_3.png) ![orange_4](data/orange/orange_4.png) |
+
+> Upload these images to your Custom Vision project and assign the matching tag to each batch.
 
    **Rule of thumb for a clean first pass:**
 
@@ -177,6 +183,10 @@ cv-classify/
 ├── .gitignore
 ├── LICENSE
 ├── README.md
+├── data/                   # Sample training images (20 per tag)
+│   ├── apple/
+│   ├── banana/
+│   └── orange/
 └── src/
     └── cv_classify/
         ├── __init__.py
